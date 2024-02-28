@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState, useRef } from "react";
+import React, { useCallback, useState } from "react";
 import { LinePath } from "@visx/shape";
 import { useDrag } from "@visx/drag";
 import { curveBasis } from "@visx/curve";
@@ -93,8 +93,8 @@ const SignatureCanvas: React.FC<PropsInterface> = ({
               strokeWidth={stockWidth}
               data={line}
               curve={curveBasis}
-              x={(d: { x: any }) => d.x}
-              y={(d: { y: any }) => d.y}
+              x={(d: any) => d.x}
+              y={(d: any) => d.y}
             />
           ))}
           <g>

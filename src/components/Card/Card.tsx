@@ -30,10 +30,7 @@ const Card: React.FC<PropsInterface> = ({ text, fontName }) => {
   }
 
   return (
-    <div
-      className="flex flex-col justify-between w-96 h-96 border border-gray-400 rounded-xl p-6"
-      style={{ fontFamily: "lobsster" }}
-    >
+    <div className="flex flex-col justify-between w-96 h-96 border border-gray-400 rounded-xl p-6 font-badScript">
       <p className={`text-gray-400 font-semibold text-xl font-${fontName}`}>
         {capitalizeWords(fontName).replace(/([a-z])([A-Z])/g, "$1 $2")}
       </p>
