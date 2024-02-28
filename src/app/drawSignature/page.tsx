@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import saveSvgAsPng from "save-svg-as-png";
+const saveSvgAsPng = require("save-svg-as-png");
 import { SignatureCanvas, ColorPicker, Range } from "@/components";
 
 const DrawSignature = () => {
