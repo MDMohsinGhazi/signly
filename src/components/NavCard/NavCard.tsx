@@ -18,7 +18,7 @@ const NavCard: React.FC<PropsInterface> = ({
   pathDesc,
 }) => {
   return (
-    <div className="max-w-[540px] bg-primarily text-white flex flex-col items-center gap-4 p-12 rounded-lg">
+    <div className="flex-1 max-w-[540px] bg-primarily text-white flex flex-col items-center gap-4 p-12 rounded-lg">
       <img
         className="w-20 aspect-square bg-white  rounded-lg"
         src={img}
