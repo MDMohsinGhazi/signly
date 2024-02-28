@@ -18,10 +18,10 @@ const Range: React.FC<PropsInterface> = ({
   step,
 }) => {
   return (
-    <div className="flex flex-col text-center gap-2">
-      <div className="text-gray-500 font-medium text-md">{label}</div>
+    <div className="flex flex-col text-center gap-1">
+      <div className="text-gray-400 font-medium text-md">{label}</div>
       <input
-        className="accent-primarily"
+        className="accent-primarily "
         type="range"
         min={min}
         max={max}

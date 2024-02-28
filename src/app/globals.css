@@ -74,3 +74,17 @@ input[type="range"]:hover::-moz-range-thumb {
     text-wrap: balance;
   }
 }
+
+@media screen and (max-width: 480px) {
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: rgb(229, 231, 235);
+    height: 0.25em;
+    width: 8em;
+  }
+
+  input[type="range"]::-moz-range-track {
+    background: rgb(229, 231, 235);
+    height: 0.25em;
+    width: 8em;
+  }
+}
