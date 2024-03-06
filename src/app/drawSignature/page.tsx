@@ -7,7 +7,6 @@ const saveSvgAsPng = require("save-svg-as-png");
 const DrawSignature = () => {
   const [color, setColor] = useState("#000");
   const [width, setWidth] = useState(2);
-  const [angal, setAngal] = useState(0);
   const [scale, setScale] = useState(1);
   const [isEmpty, setEmpty] = useState(true);
   const [key, setKey] = useState(true);
@@ -29,7 +28,7 @@ const DrawSignature = () => {
       className="flex flex-col gap-4 items-center justify-center m-auto mt-8 md:mt-20 mb-10"
       ref={divRef}
     >
-      <h1 className=" text-xl md:text-4xl font-bold text-primarily p-8">
+      <h1 className="text-xl md:text-4xl font-bold text-primarily p-8">
         Draw your eSignature here
       </h1>
       <SignatureCanvas
@@ -39,7 +38,7 @@ const DrawSignature = () => {
         width={size.width < 800 ? 0.9 * size.width : 0.6 * size.width}
         color={color}
         stockWidth={width}
-        angle={angal}
+        scale={scale}
         isEmpty={setEmpty}
       />
       <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -56,8 +55,8 @@ const DrawSignature = () => {
           <Range
             label="Scale"
             min={1}
-            max={16}
-            step={1}
+            max={1.5}
+            step={0.1}
             value={scale}
             onChange={setScale}
           />

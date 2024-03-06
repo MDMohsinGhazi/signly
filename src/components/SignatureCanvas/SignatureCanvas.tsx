@@ -13,7 +13,7 @@ interface PropsInterface {
   height: number;
   color: string;
   stockWidth: number;
-  angle: number;
+  scale: number;
   isEmpty: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -23,7 +23,7 @@ const SignatureCanvas: React.FC<PropsInterface> = ({
   height,
   color,
   stockWidth,
-  angle,
+  scale,
   isEmpty,
 }) => {
   const [lines, setLines] = useState<Lines>([]);
@@ -83,7 +83,7 @@ const SignatureCanvas: React.FC<PropsInterface> = ({
             `}
           </style>
         </defs>
-        <g>
+        <g transform={`scale(${scale})`}>
           <rect fill="transparent" width={width} height={height} rx={14} />
           {lines.map((line, i) => (
             <LinePath

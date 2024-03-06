@@ -35,13 +35,13 @@ const TypeSignature = () => {
   );
 
   return (
-    <div className="flex flex-col gap-4 items-center justify-center m-auto mt-20">
+    <div className="flex flex-col gap-4 items-center justify-center m-auto mt-8 md:mt-20 pb-10">
       <div className="flex flex-col gap-4">
-        <h1 className="text-4xl font-bold text-primarily p-8">
+        <h1 className="text-xl md:text-4xl font-bold text-primarily p-8">
           Type your signature
         </h1>
         <input
-          className="text-3xl outline-none rounded-full border-[1px] px-8 py-2 font-semibold border-gray-400 focus:border-black"
+          className="text-xl  md:text-3xl outline-none rounded-full border-[1px] px-8 py-2 font-semibold border-gray-400 focus:border-black"
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -59,7 +59,7 @@ const TypeSignature = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-8 mx-auto max-w-7xl md:max-5xl my-36">
+      <div className="flex flex-wrap justify-center gap-8 mx-auto max-w-7xl md:max-5xl md:my-36">
         {font.map((fontName, index) => (
           <animated.div key={fontName} style={cardsAnimations[index]}>
             <Card fontName={fontName} text={text} />
