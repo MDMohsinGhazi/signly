@@ -52,14 +52,14 @@ const DrawSignature = () => {
             value={width}
             onChange={setWidth}
           />
-          <Range
+          {/* <Range
             label="Scale"
             min={1}
             max={1.5}
             step={0.1}
             value={scale}
             onChange={setScale}
-          />
+          /> */}
         </div>
       </div>
       <div className="flex gap-4 md:gap-10 mt-10">

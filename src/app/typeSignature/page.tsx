@@ -62,7 +62,7 @@ const TypeSignature = () => {
       <div className="flex flex-wrap justify-center gap-8 mx-auto max-w-7xl md:max-5xl md:my-36">
         {font.map((fontName, index) => (
           <animated.div key={fontName} style={cardsAnimations[index]}>
-            <Card fontName={fontName} text={text} />
+            <Card fontName={fontName} text={text} color={color} />
           </animated.div>
         ))}
       </div>

@@ -20,6 +20,7 @@ import {
 interface PropsInterface {
   text: string;
   fontName: string;
+  color: string;
 }
 
 const kalam = Kalam({
@@ -80,7 +81,7 @@ const sacramento = Sacramento({
   weight: ["400"],
 });
 
-const Card: React.FC<PropsInterface> = ({ text, fontName }) => {
+const Card: React.FC<PropsInterface> = ({ text, fontName, color }) => {
   const signRef = useRef<HTMLDivElement>(null);
 
   const fontMap: Record<string, any> = {
@@ -123,7 +124,7 @@ const Card: React.FC<PropsInterface> = ({ text, fontName }) => {
       </p>
       <div
         className={`text-center text-3xl `}
-        style={{ ...fontMap[fontName]?.style }}
+        style={{ ...fontMap[fontName]?.style, color: color }}
         ref={signRef}
       >
         {text}
